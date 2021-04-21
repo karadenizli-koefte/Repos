@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pGUBKMN7USNCX+IZm6i6JxZyld7Cegi5uqJQpEDGYS0pGNcjDhiCpiBuwtvaEwVYMBobJvl7TIjD0IxN3kyXoA==",
+  "dgSpecHash": "xUI/JSK0X3L2npN/drG1bFED3fcPeSvI3k8cPqJ5yiepDiL1ZA0oawJmJWYaByTlR+PpMYnlBCqH4LPIdwF1uQ==",
   "success": true,
-  "projectFilePath": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FunctionalProgrammingExercises4\\FunctionalProgrammingExercises4.csproj",
+  "projectFilePath": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FPLibrary\\FPLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\serhat.akkus\\.nuget\\packages\\layumba.functional\\0.10.0\\layumba.functional.0.10.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
