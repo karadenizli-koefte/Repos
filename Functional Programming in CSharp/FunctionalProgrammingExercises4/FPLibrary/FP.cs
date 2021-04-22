@@ -1,6 +1,7 @@
 ﻿using LaYumba.Functional;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 
 using static LaYumba.Functional.F;
@@ -49,7 +50,23 @@ namespace FPLibrary
             return None;
         }
 
-        public static Option<WorkPermit> GetWorkPermit(Dictionary<string, Employee> people, string employeeId)
-            => Lookup(people, t => t.Key == employeeId).Bind(t => t.Value.WorkPermit);
+        public static Option<string> Lookup(this NameValueCollection @this, string key)
+            => @this[key];
+
+        public static Option<T> Lookup<K, T>(this IDictionary<K, T> dict, K key)
+        {
+            return dict.TryGetValue(key, out T value)
+            ? Some(value) : None;
+        }
+
+        public static Option<WorkPermit> GetWorkPermit(this Dictionary<string, Employee> people, string employeeId)
+            => people.Lookup(employeeId).Bind(t => t.WorkPermit);
+
+        // 4 Use Bind to implement AverageYearsWorkedAtTheCompany, shown below(only employees who
+        // have left should be included).
+        public static double AverageYearsWorkedAtTheCompany(this List<Employee> employees) {
+            return employees.Bind(employee => employee.LeftOn.Map(leftOn => leftOn.Year - employee.JoinedOn.Year))
+                .Average();
+        }
     }
 }

@@ -30,9 +30,9 @@ namespace FunctionalProgrammingExercises4
             Console.WriteLine();
             Console.WriteLine("Using ForEach extension");
             result.ForEach(t => Console.Write(t + " "));
+            Console.WriteLine();
 
             // Exercise 2 - Map for Option
-            Console.WriteLine();
             Console.WriteLine("Exercise 2");
             Option<int> opt1 = Some(3);
             Option<int> opt2 = None;
@@ -53,11 +53,32 @@ namespace FunctionalProgrammingExercises4
             resultBind.ForEach(t => Console.Write(t + " "));
             Console.WriteLine();
 
-            //Employee employee = new Employee
-            //{
-            //    Id = "Ismail",
-            //    WorkPermit = Some(workPermit)
-            //};
+            // Exercise 3 - Work Permit with Bind
+            Console.WriteLine("Exercise 3");
+
+            WorkPermit wp = new WorkPermit
+            {
+                Expiry = new DateTime(2021, 5, 1),
+                Number = "10_x"
+            };
+
+            var employee1 = new Employee("Ismail", wp, new DateTime(2021, 1, 1), Some(new DateTime(2023, 10, 1)));
+            var employee2 = new Employee("Emre", None, new DateTime(2021, 1, 1), Some(new DateTime(2026, 4, 1)));
+            var employee3 = new Employee("Wilfried", wp, new DateTime(2021, 1, 1), Some(new DateTime(2024, 12, 1)));
+            var employee4 = new Employee("Otto", wp, new DateTime(2021, 1, 1), None);
+            var employeeList = new List<Employee> { employee1, employee2, employee3, employee4 };
+
+            var employees = new Dictionary<string, Employee>();
+            employees.Add("employee1", employee1);
+            employees.Add("employee2", employee2);
+
+            var workPermit = employees.GetWorkPermit("employee1");
+            var wpResult = workPermit.Match(Some: t => t.Expiry + " " + t.Number, None: () => "Expired.");
+            Console.WriteLine("Work Permit = " + wpResult);
+            Console.WriteLine();
+
+            var avgYears = employeeList.AverageYearsWorkedAtTheCompany();
+            Console.WriteLine("Average Years = " + avgYears);
 
             Console.ReadLine();
         }
