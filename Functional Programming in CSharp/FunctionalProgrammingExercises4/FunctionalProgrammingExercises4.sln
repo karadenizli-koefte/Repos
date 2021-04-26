@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionalProgrammingExercises4", "FunctionalProgrammingExercises4\FunctionalProgrammingExercises4.csproj", "{4BC15BAC-E55B-4489-96A1-72EB6054C302}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter4", "FunctionalProgrammingExercises4\Chapter4.csproj", "{4BC15BAC-E55B-4489-96A1-72EB6054C302}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FPLibrary", "FPLibrary\FPLibrary.csproj", "{11385FE7-46A0-4EB9-AD87-8C3A9E178B61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FPLibrary", "FPLibrary\FPLibrary.csproj", "{11385FE7-46A0-4EB9-AD87-8C3A9E178B61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter5", "Chapter5\Chapter5.csproj", "{442DF922-58F2-477C-82FB-D0C397A0DBE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{11385FE7-46A0-4EB9-AD87-8C3A9E178B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11385FE7-46A0-4EB9-AD87-8C3A9E178B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11385FE7-46A0-4EB9-AD87-8C3A9E178B61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{442DF922-58F2-477C-82FB-D0C397A0DBE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{442DF922-58F2-477C-82FB-D0C397A0DBE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{442DF922-58F2-477C-82FB-D0C397A0DBE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{442DF922-58F2-477C-82FB-D0C397A0DBE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
