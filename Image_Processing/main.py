@@ -15,16 +15,28 @@ img = cv2.imread(imgPath, 0)
 print(img.shape)
 
 # Show gray scale image in window
-cv2.namedWindow('image', cv2.WINDOW_AUTOSIZE)
-cv2.imshow('image', img)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+# cv2.namedWindow('image', cv2.WINDOW_AUTOSIZE)
+# cv2.imshow('image', img)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
 
 # Write gray scale image to disc.
-cv2.imwrite(imgSaveGray, img)
+# cv2.imwrite(imgSaveGray, img)
 
 # Plot image with matplotlib
 img = cv2.imread(imgPath, 0)
 plt.imshow(img, cmap='gray', interpolation='bicubic')
 plt.xticks([]), plt.yticks([])  # to hide tick values on X and Y axis
 plt.show()
+
+# Conditional image save
+img = cv2.imread(imgPath, 0)
+cv2.imshow('image', img)
+k = cv2.waitKey(0)
+if k == 27:          # wait for ESC key to exit
+    cv2.destroyAllWindows()
+elif k == ord('s'):  # wait for 's' key to save and exit
+    cv2.imwrite(imgSaveGray, img)
+    cv2.destroyAllWindows()
+
+print("Key pressed = " + str(k))
