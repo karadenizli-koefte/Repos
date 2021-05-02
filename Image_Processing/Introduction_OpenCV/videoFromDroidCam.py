@@ -1,4 +1,3 @@
-import numpy as np
 import cv2
 
 # cap = cv2.VideoCapture('http://192.168.178.20:4747/mjpegfeed')
