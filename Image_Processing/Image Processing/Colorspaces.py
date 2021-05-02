@@ -20,7 +20,7 @@ img1 = cv2.imread(imgPath)
 img2 = cv2.imread(imgPath2)
 
 img1 = cv2.resize(img1, (int(img1.shape[1] / 2), int(img1.shape[0] / 2)))
-img2 = cv2.resize(img2, (int(img1.shape[1] / 2), int(img1.shape[0] / 2)))
+img2 = cv2.resize(img2, (int(img2.shape[1] / 2), int(img2.shape[0] / 2)))
 
 # define range of blue color in HSV
 lower_blue = np.array([int(80 / 100 * 255), 50, 50])
