@@ -1,11 +1,12 @@
 import cv2
 import numpy as np
 
-imgPath = 'D:/img/lena_full.jpg'
+imgPath = 'D:/img/Circles.png'
 
 # Load two images
 img = cv2.imread(imgPath, 0)
-img = cv2.resize(img, (int(img.shape[1] / 4), int(img.shape[0] / 4)))
+
+cv2.namedWindow('res')
 
 # Get moments
 ret, thresh = cv2.threshold(img, 127, 255, 0)
@@ -37,11 +38,17 @@ hull = cv2.convexHull(cnt)
 # Checking Convexity
 k = cv2.isContourConvex(cnt)
 
+img = cv2.imread(imgPath)
+
 # Bounding Rectangle
 
 # Straight Bounding Rectangle
 x, y, w, h = cv2.boundingRect(cnt)
-img = cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
+im = cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
+
+cv2.imshow('res', im)
+cv2.waitKey()
+img = cv2.imread(imgPath)
 
 # Rotated Bounding Rectangle
 rect = cv2.minAreaRect(cnt)
@@ -49,19 +56,35 @@ box = cv2.boxPoints(rect)
 box = np.int0(box)
 im = cv2.drawContours(img, [box], 0, (0, 0, 255), 2)
 
+cv2.imshow('res', im)
+cv2.waitKey()
+img = cv2.imread(imgPath)
+
 # Minimum Enclosing Circle
 (x, y), radius = cv2.minEnclosingCircle(cnt)
 center = (int(x), int(y))
 radius = int(radius)
-img = cv2.circle(img, center, radius, (0, 255, 0), 2)
+im = cv2.circle(img, center, radius, (0, 255, 0), 2)
+
+cv2.imshow('res', im)
+cv2.waitKey()
+img = cv2.imread(imgPath)
 
 # Fitting an Ellipse
 ellipse = cv2.fitEllipse(cnt)
-im = cv2.ellipse(im, ellipse, (0, 255, 0), 2)
+im = cv2.ellipse(img, ellipse, (0, 255, 0), 2)
+
+cv2.imshow('res', im)
+cv2.waitKey()
+img = cv2.imread(imgPath)
 
 # Fitting a Line
 rows, cols = img.shape[:2]
 [vx, vy, x, y] = cv2.fitLine(cnt, cv2.DIST_L2, 0, 0.01, 0.01)
 lefty = int((-x * vy / vx) + y)
 righty = int(((cols - x) * vy / vx) + y)
-img = cv2.line(img, (cols - 1, righty), (0, lefty), (0, 255, 0), 2)
+im = cv2.line(img, (cols - 1, righty), (0, lefty), (0, 255, 0), 2)
+
+cv2.imshow('res', im)
+cv2.waitKey()
+cv2.destroyAllWindows()
