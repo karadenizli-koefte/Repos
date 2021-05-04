@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FunctionalProgrammingExercises4\\Chapter4.csproj": {}
+    "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\Chapter6\\Chapter6.csproj": {}
   },
   "projects": {
-    "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FPLibrary\\FPLibrary.csproj": {
+    "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\Chapter6\\Chapter6.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FPLibrary\\FPLibrary.csproj",
-        "projectName": "FPLibrary",
-        "projectPath": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FPLibrary\\FPLibrary.csproj",
+        "projectUniqueName": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\Chapter6\\Chapter6.csproj",
+        "projectName": "Chapter6",
+        "projectPath": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\Chapter6\\Chapter6.csproj",
         "packagesPath": "C:\\Users\\serhat.akkus\\.nuget\\packages\\",
-        "outputPath": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FPLibrary\\obj\\",
+        "outputPath": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\Chapter6\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -32,7 +32,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FPLibrary\\FPLibrary.csproj": {
+                "projectPath": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FPLibrary\\FPLibrary.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -69,14 +73,14 @@
         }
       }
     },
-    "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FunctionalProgrammingExercises4\\Chapter4.csproj": {
+    "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FPLibrary\\FPLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FunctionalProgrammingExercises4\\Chapter4.csproj",
-        "projectName": "Chapter4",
-        "projectPath": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FunctionalProgrammingExercises4\\Chapter4.csproj",
+        "projectUniqueName": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FPLibrary\\FPLibrary.csproj",
+        "projectName": "FPLibrary",
+        "projectPath": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FPLibrary\\FPLibrary.csproj",
         "packagesPath": "C:\\Users\\serhat.akkus\\.nuget\\packages\\",
-        "outputPath": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FunctionalProgrammingExercises4\\obj\\",
+        "outputPath": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FPLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -97,11 +101,7 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {
-              "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FPLibrary\\FPLibrary.csproj": {
-                "projectPath": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FPLibrary\\FPLibrary.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
