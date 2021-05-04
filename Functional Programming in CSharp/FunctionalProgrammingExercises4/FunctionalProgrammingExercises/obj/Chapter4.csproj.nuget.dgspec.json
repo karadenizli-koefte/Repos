@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FunctionalProgrammingExercises4\\Chapter4.csproj": {}
+    "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FunctionalProgrammingExercises\\Chapter4.csproj": {}
   },
   "projects": {
     "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FPLibrary\\FPLibrary.csproj": {
@@ -69,14 +69,14 @@
         }
       }
     },
-    "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FunctionalProgrammingExercises4\\Chapter4.csproj": {
+    "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FunctionalProgrammingExercises\\Chapter4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FunctionalProgrammingExercises4\\Chapter4.csproj",
+        "projectUniqueName": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FunctionalProgrammingExercises\\Chapter4.csproj",
         "projectName": "Chapter4",
-        "projectPath": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FunctionalProgrammingExercises4\\Chapter4.csproj",
+        "projectPath": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FunctionalProgrammingExercises\\Chapter4.csproj",
         "packagesPath": "C:\\Users\\serhat.akkus\\.nuget\\packages\\",
-        "outputPath": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FunctionalProgrammingExercises4\\obj\\",
+        "outputPath": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\FunctionalProgrammingExercises\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
