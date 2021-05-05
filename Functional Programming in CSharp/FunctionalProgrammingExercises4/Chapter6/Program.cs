@@ -12,6 +12,7 @@ namespace Chapter6
         static Option<double> Sqrt(this double number) => (number < 0) ? None : Math.Sqrt(number);
         static Either<string, int> Parse(this string s) => int.TryParse(s, out int result) ? Right(result) : Left("Parse unsuccessful.");
         static Func<string, Option<Age>> parseAge = s => Parse(s).Bind(Age.Of);
+        // TryRun : (() → T) → Exceptional<T>
         static Exceptional<T> TryRun<T>(Func<T> func)
         {
             try
@@ -26,6 +27,21 @@ namespace Chapter6
 
         static int func1() => throw new NotImplementedException(); 
         static int func2() => 5;
+
+        // Safely : ((() → R), (Exception → L)) → Either<L, R>
+        static Either<L, R> Safely<L, R>(Func<R> func, Func<Exception, L> funcEx)
+        {
+            try
+            {
+                return func();
+            }
+            catch(Exception ex)
+            {
+                return funcEx(ex);
+            }
+        }
+
+        static string GetErrorMessage(Exception ex) => "Wrong: " + ex.Message;
 
         static void Main(string[] args)
         {
@@ -58,12 +74,21 @@ namespace Chapter6
 
             // Exercise 3
             var result = TryRun(func1).Match(
-                Success: s => Console.WriteLine("TryRun(func1) = " + s),
+                Success:   s => Console.WriteLine("TryRun(func1) = " + s),
                 Exception: e => Console.WriteLine("TryRun(func1) = " + e.Message));
 
             var result2 = TryRun(func2).Match(
-                Success: s => Console.WriteLine("TryRun(func2) = " + s),
+                Success:   s => Console.WriteLine("TryRun(func2) = " + s),
                 Exception: e => Console.WriteLine("TryRun(func2) = " + e.Message));
+
+            // Exercise 4
+            var resultSafely = Safely(func1, GetErrorMessage).Match(
+                Right: s => Console.WriteLine("Safely(func1, GetErrorMessage) = " + s),
+                Left:  e => Console.WriteLine("Safely(func1, GetErrorMessage) = " + e));
+
+            var resultSafely2 = Safely(func2, GetErrorMessage).Match(
+                Right: s => Console.WriteLine("Safely(func2, GetErrorMessage) = " + s),
+                Left:  e => Console.WriteLine("Safely(func2, GetErrorMessage) = " + e));
 
             Console.ReadKey();
         }
