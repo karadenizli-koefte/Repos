@@ -1,11 +1,11 @@
-﻿using DapperTest.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Repository.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DapperTest.Data
+namespace Repository.Data
 {
     public class ApplicationDbContext : DbContext
     {

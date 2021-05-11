@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using DapperTest.Data;
-using DapperTest.Models;
-using DapperTest.Repository;
+using Repository;
+using Repository.Models;
 
 namespace DapperTest.Controllers
 {

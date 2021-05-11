@@ -1,14 +1,12 @@
 ﻿using Dapper;
-using DapperTest.Data;
-using DapperTest.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-using System;
+using Repository.Models;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 
-namespace DapperTest.Repository
+namespace Repository
 {
     public class CompanyRepository : ICompanyRepository
     {

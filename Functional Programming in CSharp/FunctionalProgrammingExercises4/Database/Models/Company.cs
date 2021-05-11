@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DapperTest.Models
+namespace Repository.Models
 {
     public class Company
     {

@@ -1,10 +1,10 @@
-﻿using DapperTest.Data;
-using DapperTest.Models;
+﻿using Repository.Data;
+using Repository.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DapperTest.Repository
+namespace Repository
 {
     public class CompanyRepositoryEF : ICompanyRepository
     {

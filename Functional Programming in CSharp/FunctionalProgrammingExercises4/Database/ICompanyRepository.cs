@@ -1,7 +1,7 @@
-﻿using DapperTest.Models;
+﻿using Repository.Models;
 using System.Collections.Generic;
 
-namespace DapperTest.Repository
+namespace Repository
 {
     public interface ICompanyRepository
     {
