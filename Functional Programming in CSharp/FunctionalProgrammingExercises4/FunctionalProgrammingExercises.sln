@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter6", "Chapter6\Chapte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter7", "Chapter7\Chapter7.csproj", "{98F22E7D-CEBD-40C2-A13D-453187F5EBEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperTest", "DapperTest\DapperTest.csproj", "{4D8D0991-F686-417A-A845-C33035F81ADD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperTest", "DapperTest\DapperTest.csproj", "{4D8D0991-F686-417A-A845-C33035F81ADD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Database\Repository.csproj", "{74EEF355-0C66-4B3F-BB1F-82D61FF4A735}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{4D8D0991-F686-417A-A845-C33035F81ADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D8D0991-F686-417A-A845-C33035F81ADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D8D0991-F686-417A-A845-C33035F81ADD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74EEF355-0C66-4B3F-BB1F-82D61FF4A735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74EEF355-0C66-4B3F-BB1F-82D61FF4A735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74EEF355-0C66-4B3F-BB1F-82D61FF4A735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74EEF355-0C66-4B3F-BB1F-82D61FF4A735}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

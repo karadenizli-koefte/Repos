@@ -20,6 +20,9 @@ namespace Chapter7
             Console.WriteLine("Field = " + greetingField("Firdez"));
             Console.WriteLine("Propertty = " + greetingField("Hüseyin"));
             Console.WriteLine("Factory = " + greetingField("Ismail"));
+
+            EmployeeLookup.Run();
+
             Console.ReadKey();
         }
     }

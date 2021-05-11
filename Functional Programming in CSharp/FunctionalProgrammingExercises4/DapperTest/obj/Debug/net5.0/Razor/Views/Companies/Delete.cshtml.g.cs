@@ -28,7 +28,7 @@ using DapperTest.Models;
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"74043f384fb5413ae5415a981b2fc2375b000f1a", @"/Views/Companies/Delete.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"42bc0d455699f2153dfc426fe437a5483de28767", @"/Views/_ViewImports.cshtml")]
-    public class Views_Companies_Delete : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<DapperTest.Models.Company>
+    public class Views_Companies_Delete : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Repository.Models.Company>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("type", "hidden", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -218,7 +218,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
         public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<DapperTest.Models.Company> Html { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<Repository.Models.Company> Html { get; private set; }
     }
 }
 #pragma warning restore 1591

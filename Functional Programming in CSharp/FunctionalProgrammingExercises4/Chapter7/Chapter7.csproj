@@ -7,9 +7,11 @@
 
   <ItemGroup>
     <PackageReference Include="LaYumba.Functional" Version="0.10.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Database\Repository.csproj" />
     <ProjectReference Include="..\FPLibrary\FPLibrary.csproj" />
   </ItemGroup>
 
