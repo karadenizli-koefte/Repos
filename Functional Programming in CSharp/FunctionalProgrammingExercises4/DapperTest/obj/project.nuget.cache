@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hZrUfcVOC4p+vWbYb/L8TynygNGTnFmMdKGxGlm+Qb8BneDb+Q6Fr/qIhICYp5x/cKoA2gWTzvBvP8Zp6fYdvA==",
+  "dgSpecHash": "7MJFOU/STNR6qnXPe1KPa7FyowClgHYI1NsQVonYgj0wVB3yZO1Vzn+K5pAh4SMqGLvet+3MZzF7bbtr1TAjfw==",
   "success": true,
   "projectFilePath": "D:\\_MyRepo\\Functional Programming in CSharp\\FunctionalProgrammingExercises4\\DapperTest\\DapperTest.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\serhat.akkus\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
     "C:\\Users\\serhat.akkus\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\serhat.akkus\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\serhat.akkus\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

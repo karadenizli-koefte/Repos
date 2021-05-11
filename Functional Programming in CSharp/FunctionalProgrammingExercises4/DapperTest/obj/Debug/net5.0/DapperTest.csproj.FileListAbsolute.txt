@@ -149,3 +149,4 @@ D:\_MyRepo\Functional Programming in CSharp\FunctionalProgrammingExercises4\Dapp
 D:\_MyRepo\Functional Programming in CSharp\FunctionalProgrammingExercises4\DapperTest\obj\Debug\net5.0\Razor\Views\Companies\Details.cshtml.g.cs
 D:\_MyRepo\Functional Programming in CSharp\FunctionalProgrammingExercises4\DapperTest\obj\Debug\net5.0\Razor\Views\Companies\Edit.cshtml.g.cs
 D:\_MyRepo\Functional Programming in CSharp\FunctionalProgrammingExercises4\DapperTest\obj\Debug\net5.0\Razor\Views\Companies\Index.cshtml.g.cs
+D:\_MyRepo\Functional Programming in CSharp\FunctionalProgrammingExercises4\DapperTest\bin\Debug\net5.0\Dapper.dll
