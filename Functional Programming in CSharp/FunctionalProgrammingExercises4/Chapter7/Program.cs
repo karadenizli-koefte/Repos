@@ -25,6 +25,7 @@ namespace Chapter7
 
             // Exercises
             Exercises.RunExercise1();
+            Exercises.RunExercise2();
 
             Console.ReadKey();
         }

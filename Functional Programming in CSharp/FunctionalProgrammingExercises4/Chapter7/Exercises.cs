@@ -77,11 +77,15 @@ namespace Chapter7
 
         public static Unit RunExercise2()
         {
-            var remainderBy5 = Remainder.Apply(5);
-            Console.WriteLine("remainderBy5(15) = " + remainderBy5(15));
-            Console.WriteLine("remainderBy5(22) = " + remainderBy5(22));
-            Console.WriteLine("remainderBy5(3) = " + remainderBy5(3));
-            Console.WriteLine("remainderBy5(-3) = " + remainderBy5(-3));
+            PhoneNumber phoneNumber = new PhoneNumber
+            {
+                CountryCode = new CountryCode("de"),
+                NumberType = new NumberType("mobile"),
+                Number = "1234 / 567890"
+            };
+
+            Console.WriteLine("phoneNumber.CountryCode == 'it' = " + (phoneNumber.CountryCode == new CountryCode("it")));
+            Console.WriteLine("phoneNumber.CountryCode == 'de' = " + (phoneNumber.CountryCode == new CountryCode("de")));
 
             return new Unit();
         }
