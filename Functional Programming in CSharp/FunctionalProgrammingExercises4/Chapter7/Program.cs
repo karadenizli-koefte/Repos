@@ -21,7 +21,11 @@ namespace Chapter7
             Console.WriteLine("Propertty = " + greetingField("Hüseyin"));
             Console.WriteLine("Factory = " + greetingField("Ismail"));
 
-            EmployeeLookup.Run();
+            // EmployeeLookup.Run();
+
+            // Exercises
+            Exercises.RunExercise1();
+            Exercises.RunExercise2();
 
             Console.ReadKey();
         }
