@@ -84,8 +84,13 @@ namespace Chapter7
                 Number = "1234 / 567890"
             };
 
-            Console.WriteLine("phoneNumber.CountryCode == 'it' = " + (phoneNumber.CountryCode == new CountryCode("it")));
-            Console.WriteLine("phoneNumber.CountryCode == 'de' = " + (phoneNumber.CountryCode == new CountryCode("de")));
+            Console.WriteLine("phoneNumber.CountryCode == new CountryCode('it') = " + (phoneNumber.CountryCode == new CountryCode("it")));
+            Console.WriteLine("phoneNumber.CountryCode == new CountryCode('de') = " + (phoneNumber.CountryCode == new CountryCode("de")));
+            Console.WriteLine("phoneNumber.CountryCode == 'it' = " + (phoneNumber.CountryCode == "it"));
+            Console.WriteLine("phoneNumber.CountryCode == 'de' = " + (phoneNumber.CountryCode == "de"));
+
+            // This implicitely casts the country code to a string.
+            Console.WriteLine("phoneNumber.CountryCode" + phoneNumber.CountryCode);
 
             return new Unit();
         }
