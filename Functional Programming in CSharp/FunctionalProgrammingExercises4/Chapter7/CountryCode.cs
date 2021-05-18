@@ -6,34 +6,26 @@ using System.Threading.Tasks;
 
 namespace Chapter7
 {
-    public class CountryCode : IEquatable<CountryCode>
+    public class CountryCode
     {
-        private string _value;
+        private string Value;
 
         public CountryCode(string code)
         {
-            this._value = code;
+            this.Value = code;
         }
 
-        public override bool Equals(object obj)
-        {
-            return Equals(obj as CountryCode);
-        }
+        // Equality operators
+        public static bool operator ==(CountryCode code, CountryCode compare) => code.Value == compare.Value;
+        public static bool operator !=(CountryCode code, CountryCode compare) => code.Value != compare.Value;
 
-        public bool Equals(CountryCode other)
-        {
-            return other != null &&
-                   _value == other._value;
-        }
+        public static bool operator ==(CountryCode code, string compare) => code.Value == compare;
+        public static bool operator !=(CountryCode code, string compare) => code.Value != compare;
 
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(_value);
-        }
+        // Conversion methods
+        public static implicit operator string(CountryCode c) => c.Value;
+        public static implicit operator CountryCode(string s) => new(s);
 
-        public static bool operator ==(CountryCode code, CountryCode compare) => code.Equals(compare);
-        public static bool operator !=(CountryCode code, CountryCode compare) => !code.Equals(compare);
-        //public static bool operator ==(CountryCode code, string compare) => code._value.Equals(compare);
-        //public static bool operator !=(CountryCode code, string compare) => !code._value.Equals(compare);
+        public override string ToString() => Value;
     }
 }
