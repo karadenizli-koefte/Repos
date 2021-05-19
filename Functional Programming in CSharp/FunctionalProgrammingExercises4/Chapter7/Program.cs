@@ -1,4 +1,5 @@
 ﻿using System;
+using Chapter7.Logger;
 using LaYumba.Functional;
 
 namespace Chapter7
@@ -24,8 +25,14 @@ namespace Chapter7
             // EmployeeLookup.Run();
 
             // Exercises
+            Console.WriteLine();
             Exercises.RunExercise1();
+
+            Console.WriteLine();
             Exercises.RunExercise2();
+
+            Console.WriteLine();
+            ConsoleLogger.RunLogger();
 
             Console.ReadKey();
         }
