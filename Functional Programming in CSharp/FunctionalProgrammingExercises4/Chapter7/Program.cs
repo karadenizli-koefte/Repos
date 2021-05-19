@@ -24,7 +24,10 @@ namespace Chapter7
             // EmployeeLookup.Run();
 
             // Exercises
+            Console.WriteLine();
             Exercises.RunExercise1();
+
+            Console.WriteLine();
             Exercises.RunExercise2();
 
             Console.ReadKey();

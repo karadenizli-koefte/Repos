@@ -1,4 +1,5 @@
-﻿using LaYumba.Functional;
+﻿using Chapter7.PhoneNumbers;
+using LaYumba.Functional;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,15 +59,26 @@ namespace Chapter7
         public static Func<int, int, int> Remainder = (dividend, divisor)
          => dividend - ((dividend / divisor) * divisor);
 
+        // Applies the right-most argument of the binary function.
         public static Func<T1, R> ApplyR<T1, T2, R>(this Func<T1, T2, R> func, T2 t2)
             => (t1) => func(t1, t2);
 
+        // Applies the right-most argument of the ternary function.
         public static Func<T1, T2, R> ApplyR<T1, T2,T3, R>(this Func<T1, T2, T3, R> func, T3 t3)
             => (t1, t2) => func(t1, t2, t3);
 
+        // Applies the second argument of the ternary function.
+        public static Func<T1, T3, R> ApplyM<T1, T2, T3, R>(this Func<T1, T2, T3, R> func, T2 t2)
+            => (t1, t3) => func(t1, t2, t3);
+
+        // Factory to create a function to create a phone number. With partial application, this can be specified
+        // by supplying specific arguments piecemeal.
+        public static Func<string, CountryCode, NumberType, PhoneNumber> CreatePhoneNumber()
+            => (number, countryCode, numberType) => new PhoneNumber(number, countryCode, numberType);
+
         public static Unit RunExercise1()
         {
-            var remainderBy5 = Remainder.Apply(5);
+            var remainderBy5 = Remainder.ApplyR(5);
             Console.WriteLine("remainderBy5(15) = " + remainderBy5(15));
             Console.WriteLine("remainderBy5(22) = " + remainderBy5(22));
             Console.WriteLine("remainderBy5(3) = " + remainderBy5(3));
@@ -77,13 +89,12 @@ namespace Chapter7
 
         public static Unit RunExercise2()
         {
-            PhoneNumber phoneNumber = new PhoneNumber
-            {
-                CountryCode = new CountryCode("de"),
-                NumberType = new NumberType("mobile"),
-                Number = "1234 / 567890"
-            };
+            var phoneNumber = new PhoneNumber(
+                "1234 / 567890",
+                new CountryCode("de"),
+                NumberType.Mobile);
 
+            // Equality between country code representations 
             Console.WriteLine("phoneNumber.CountryCode == new CountryCode('it') = " + (phoneNumber.CountryCode == new CountryCode("it")));
             Console.WriteLine("phoneNumber.CountryCode == new CountryCode('de') = " + (phoneNumber.CountryCode == new CountryCode("de")));
             Console.WriteLine("phoneNumber.CountryCode == 'it' = " + (phoneNumber.CountryCode == "it"));
@@ -91,6 +102,15 @@ namespace Chapter7
 
             // This implicitely casts the country code to a string.
             Console.WriteLine("phoneNumber.CountryCode" + phoneNumber.CountryCode);
+
+            // Partial application
+            var createGermanNumber = CreatePhoneNumber().ApplyM(new CountryCode("de"));
+            var createGermanMobileNumber = createGermanNumber.ApplyR(NumberType.Mobile);
+            var germanMobilePhoneNumber = createGermanMobileNumber("12345-TEST");
+
+            Console.WriteLine();
+            Console.WriteLine("Partial application with phone numbers");
+            Console.WriteLine(germanMobilePhoneNumber.ToString());
 
             return new Unit();
         }
