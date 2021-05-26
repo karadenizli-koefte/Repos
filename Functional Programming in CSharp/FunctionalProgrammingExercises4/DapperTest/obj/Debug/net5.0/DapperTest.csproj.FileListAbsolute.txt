@@ -158,3 +158,9 @@ D:\_MyRepo\Functional Programming in CSharp\FunctionalProgrammingExercises4\Dapp
 D:\_MyRepo\Functional Programming in CSharp\FunctionalProgrammingExercises4\DapperTest\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 D:\_MyRepo\Functional Programming in CSharp\FunctionalProgrammingExercises4\DapperTest\bin\Debug\net5.0\Repository.dll
 D:\_MyRepo\Functional Programming in CSharp\FunctionalProgrammingExercises4\DapperTest\bin\Debug\net5.0\Repository.pdb
+D:\_MyRepo\Functional Programming in CSharp\FunctionalProgrammingExercises4\DapperTest\bin\Debug\net5.0\LaYumba.Functional.dll
+D:\_MyRepo\Functional Programming in CSharp\FunctionalProgrammingExercises4\DapperTest\bin\Debug\net5.0\System.Reactive.Core.dll
+D:\_MyRepo\Functional Programming in CSharp\FunctionalProgrammingExercises4\DapperTest\bin\Debug\net5.0\System.Reactive.Interfaces.dll
+D:\_MyRepo\Functional Programming in CSharp\FunctionalProgrammingExercises4\DapperTest\bin\Debug\net5.0\System.Reactive.Linq.dll
+D:\_MyRepo\Functional Programming in CSharp\FunctionalProgrammingExercises4\DapperTest\bin\Debug\net5.0\System.Reactive.PlatformServices.dll
+D:\_MyRepo\Functional Programming in CSharp\FunctionalProgrammingExercises4\DapperTest\bin\Debug\net5.0\System.Runtime.InteropServices.WindowsRuntime.dll
