@@ -64,7 +64,7 @@ namespace Chapter7
             => (t1) => func(t1, t2);
 
         // Applies the right-most argument of the ternary function.
-        public static Func<T1, T2, R> ApplyR<T1, T2,T3, R>(this Func<T1, T2, T3, R> func, T3 t3)
+        public static Func<T1, T2, R> ApplyR<T1, T2, T3, R>(this Func<T1, T2, T3, R> func, T3 t3)
             => (t1, t2) => func(t1, t2, t3);
 
         // Applies the second argument of the ternary function.
