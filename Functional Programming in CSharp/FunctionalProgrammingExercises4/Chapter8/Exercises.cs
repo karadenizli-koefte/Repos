@@ -13,6 +13,13 @@ namespace Chapter8
 
         private static Func<double, double, double> CalculateHypothenuse => (distA, distB) => Math.Sqrt(distA * distA + distB * distB);
 
+        private static Validation<double> Divide5ByDivisor(double d)
+        {
+            return d != 0
+               ? Valid(5 / d)
+               : Invalid(null);
+        }
+
         // Normal apply
         private static Func<T2, R> Apply<T1, T2, R>(this Func<T1, T2, R> func, T1 value)
             => t2 => func(value, t2);
@@ -42,16 +49,17 @@ namespace Chapter8
             => func.Match(
                 Success: f => value.Match<Exceptional<R>>(
                     Success: t => f(t),
-                    Exception: errVal => new Exception("Exception, dude!")),
-                Exception: err => value.Match<Exceptional<R>>(
-                    Success: _ => new Exception("Exception, dude!"),
-                    Exception: errVal => new Exception("Exception, dude!")));
+                    Exception: ex => ex),
+                Exception: ex => ex);
 
         public static void RunExercise1()
         {
             // 4 * 4 + 3 * 3 = 16 + 9 = 25 -> The square root and the length of the hypothenuse is therefore 5.
             var CalculateHypothenuseWithKathete5 = Exercises.CalculateHypothenuse.Apply(4);
             Console.WriteLine("CalculateHypothenuseWithKathete5(3) = " + CalculateHypothenuseWithKathete5(3));
+
+
+            var devide5With0 = Divide5ByDivisor(5);
         }
     }
 }
