@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinTest.Views.GreetPage"
+             xmlns:vm="clr-namespace:XamarinTest.ViewModels"
+             Title="{Binding Number2bDisplayed}">
+    <ContentPage.BindingContext>
+        <vm:GreetViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding Number2bDisplayed}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Increment Number" Command="{Binding IncreaseCommand}" BackgroundColor="Aqua"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
