@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace XamarinTest.ViewModels
@@ -11,19 +14,42 @@ namespace XamarinTest.ViewModels
     public class ImageViewModel : INotifyPropertyChanged
     {
         public ImageSource ImgSrc { get; set; }
+        public string FullPath { get; set; }
         public ICommand SelectImageCommand { get; }
 
         public ImageViewModel()
         {
             ImgSrc = ImageSource.FromResource("XamarinTest.Images.Lena.png");
-            
+            FullPath = "XamarinTest.Images.Lena.png";
             SelectImageCommand = new Command(SelectImage);
         }
 
         void SelectImage()
         {
             // TODO: Select image file from file system.
+            var result = PickAndShow();
+
+            // ImgSrc = ImageSource.FromFile(result.Result.FullPath);
+
             OnPropertyChanged(nameof(ImgSrc));
+            OnPropertyChanged(nameof(FullPath));
+        }
+
+        async Task<FileResult> PickAndShow()
+        {
+            try
+            {
+                var result = await FilePicker.PickAsync();
+                FullPath = result.FullPath;
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                // The user canceled or something went wrong
+            }
+
+            return null;
         }
 
         protected bool SetProperty<T>(ref T backingStore, T value,

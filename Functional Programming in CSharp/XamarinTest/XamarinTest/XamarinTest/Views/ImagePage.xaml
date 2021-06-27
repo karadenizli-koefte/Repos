@@ -8,11 +8,11 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="{Binding FullPath}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Image x:Name="image" WidthRequest="50" Source="{Binding ImgSrc}"/>
-            <Button Text="SELECT IMAGE" Command="SelectImageCommand"></Button>
+            <Button Text="SELECT IMAGE" Command="{Binding SelectImageCommand}"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
