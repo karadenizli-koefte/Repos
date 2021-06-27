@@ -22,7 +22,6 @@ D:\_Repos\Functional Programming in CSharp\XamarinTest\XamarinTest\XamarinTest\b
 D:\_Repos\Functional Programming in CSharp\XamarinTest\XamarinTest\XamarinTest\bin\Debug\netstandard2.0\XamarinTest.dll
 D:\_Repos\Functional Programming in CSharp\XamarinTest\XamarinTest\XamarinTest\bin\Debug\netstandard2.0\ref\XamarinTest.dll
 D:\_Repos\Functional Programming in CSharp\XamarinTest\XamarinTest\XamarinTest\bin\Debug\netstandard2.0\XamarinTest.pdb
-D:\_Repos\Functional Programming in CSharp\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\XamarinTest.csproj.AssemblyReference.cache
 D:\_Repos\Functional Programming in CSharp\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\App.xaml.g.cs
 D:\_Repos\Functional Programming in CSharp\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
 D:\_Repos\Functional Programming in CSharp\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
@@ -38,3 +37,4 @@ D:\_Repos\Functional Programming in CSharp\XamarinTest\XamarinTest\XamarinTest\o
 D:\_Repos\Functional Programming in CSharp\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\XamarinTest.dll
 D:\_Repos\Functional Programming in CSharp\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\ref\XamarinTest.dll
 D:\_Repos\Functional Programming in CSharp\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\XamarinTest.pdb
+D:\_Repos\Functional Programming in CSharp\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\ImagePage.xaml.g.cs
