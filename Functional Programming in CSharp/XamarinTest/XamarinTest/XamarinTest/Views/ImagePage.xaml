@@ -9,10 +9,12 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="{Binding FullPath}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Image x:Name="image" Source="{Binding ImgSrc}"/>
-            <Button Text="SELECT IMAGE" Command="{Binding SelectImageCommand}"></Button>
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
+            <Image x:Name="image" Source="{Binding ImgSrc}" />
+            <Button Text="SELECT IMAGE" Command="{Binding SelectImageCommand}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
