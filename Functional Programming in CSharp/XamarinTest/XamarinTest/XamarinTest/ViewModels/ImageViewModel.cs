@@ -24,15 +24,10 @@ namespace XamarinTest.ViewModels
             SelectImageCommand = new Command(SelectImage);
         }
 
-        void SelectImage()
+        async void SelectImage()
         {
             // TODO: Select image file from file system.
-            var result = PickAndShow();
-
-            // ImgSrc = ImageSource.FromFile(result.Result.FullPath);
-
-            OnPropertyChanged(nameof(ImgSrc));
-            OnPropertyChanged(nameof(FullPath));
+            await PickAndShow();
         }
 
         async Task<FileResult> PickAndShow()
@@ -41,6 +36,11 @@ namespace XamarinTest.ViewModels
             {
                 var result = await FilePicker.PickAsync();
                 FullPath = result.FullPath;
+
+                ImgSrc = ImageSource.FromFile(FullPath);
+
+                OnPropertyChanged(nameof(ImgSrc));
+                OnPropertyChanged(nameof(FullPath));
 
                 return result;
             }
