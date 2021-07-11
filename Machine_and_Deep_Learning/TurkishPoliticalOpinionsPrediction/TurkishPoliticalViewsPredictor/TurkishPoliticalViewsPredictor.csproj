@@ -10,15 +10,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Dataset\data.csv">
+    <None Update="Data\data.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Dataset\datav2.csv">
+    <None Update="Data\datav2.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Dataset\yonelimfinal.csv">
+    <None Update="Data\yonelimfinal.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>
